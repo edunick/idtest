@@ -1,6 +1,16 @@
-
 name: Deploy to AWS EKS
 on:
   workflow_dispatch:
   push:
     branches: [ staging ]
+jobs:  
+  build:
+    name: Build Image
+    runs-on: ubuntu-latest   
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Create .env file
+      run: |
+        ls -l

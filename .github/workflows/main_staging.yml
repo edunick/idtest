@@ -1,1 +1,6 @@
 
+name: Deploy to AWS EKS
+on:
+  workflow_dispatch:
+  push:
+    branches: [ staging ]
